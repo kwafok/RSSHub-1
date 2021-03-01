@@ -666,3 +666,8 @@ RSSHub 支持使用访问密钥 / 码，白名单和黑名单三种方式进行�
         | <https://pic1.xuehuaimg.com/proxy/>      | cloudflare   |
         | <https://cors.netnr.workers.dev/>        | cloudflare   |
         | <https://netnr-proxy.openode.io/>        | digitalocean |
+
+-   Facebook user:
+
+    -   `FACEBOOK_USERNAME`: Facebook 用户名或邮箱
+    -   `FACEBOOK_PASSWORD`: Facebook 密码

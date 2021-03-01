@@ -326,6 +326,16 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 
 <Route author="maple3142" example="/facebook/page/SonetPCR" path="/facebook/page/:id" :paramsDesc="['專頁 id']" anticrawler="1"/>
 
+### 用户动态
+
+::: warning 注意
+
+用户动态需要配置邮箱 `FACEBOOK_USERNAME` 和密码 `FACEBOOK_PASSWORD` 登录，所以只能自建。
+
+:::
+
+<Route author="kwafok" example="/facebook/user/zooofdepression" path="/facebook/user/:id" :paramsDesc="['user id']" anticrawler="1" selfhost="1"/>
+
 ## Fur Affinity
 
 ### 主页
