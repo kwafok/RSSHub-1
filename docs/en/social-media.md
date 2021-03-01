@@ -34,6 +34,15 @@ pageClass: routes
 
 <RouteEn author="maple3142" example="/facebook/page/SonetPCR" path="/facebook/page/:id" :paramsDesc="['page id']" anticrawler="1"/>
 
+### User Timeline
+::: warning
+
+You have to setup `FACEBOOK_USERNAME` and `FACEBOOK_PASSWORD` to login so this route is only for self-hosted.
+
+:::
+
+<RouteEn author="kwafok" example="/facebook/user/zooofdepression" path="/facebook/user/:id" :paramsDesc="['user id']" anticrawler="1" selfhost="1"/>
+
 ## Fur Affinity
 
 ### Home

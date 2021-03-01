@@ -533,3 +533,7 @@ See docs of specified route and `lib/config.js` for detail information.
         | https://cors.netnr.workers.dev/          | cloudflare   |
         | https://netnr-proxy.openode.io/          | digitalocean |
 
+-   Facebook user:
+
+    -   `FACEBOOK_USERNAME`: Facebook username or email
+    -   `FACEBOOK_PASSWORD`: Facebook password
