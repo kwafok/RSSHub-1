@@ -9,6 +9,19 @@ pageClass: routes
 ### Annual FOIA Reports
 
 <RouteEn author="nczitzk" example="/cia/foia-annual-report" path="/cia/foia-annual-report"/>
+
+## Constitutional Court of Baden-Württemberg (Germany)
+
+### Press releases
+
+<RouteEn author="quinn-dev" example="/verfghbw/press" path="/verfghbw/press/:keyword?" :paramsDesc="['Keyword']"/>
+
+## Hong Kong Independent Commission Against Corruption
+
+### Press Releases
+
+<Route author="linbuxiao" example="/icac/news/sc" path="/icac/news/:lang?" :paramsDesc="['Language, default to `sc`. Supprot `en`(English), `sc`(Simplified Chinese) and `tc`(Traditional Chinese)']">
+
 ## Ministry of Foreign Affairs of Japan
 
 ### Press conference

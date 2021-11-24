@@ -4,6 +4,66 @@ pageClass: routes
 
 # 论坛
 
+## 2047
+
+### 分类
+
+<Route author="nczitzk" example="/2047" path="/2047/:category?/:sort?" :paramsDesc="['分类，见下表，默认为首页', '排序，见下表，默认为综合']">
+
+分类
+
+| 首页 | 时政     | 民生  | 科技 | 休闲    |
+| ---- | -------- | ----- | ---- | ------- |
+|      | opinions | daily | stem | culture |
+
+| 欢乐     | 江湖  | 站务   | 水    |
+| -------- | ----- | ------ | ----- |
+| tainment | inner | office | water |
+
+| 时事 | 观点 | 政治 | 人物 | 司法实践 |
+| ---- | ---- | ---- | ---- | -------- |
+| 2    | 1    | 31   | 10   | 49       |
+
+| 香港 | 历史 | 疫情 | 新疆 | 假设 |
+| ---- | ---- | ---- | ---- | ---- |
+| 47   | 85   | 44   | 32   | 22   |
+
+| 经济 | 生活 | 留学移民 | 情感 | 教育 |
+| ---- | ---- | -------- | ---- | ---- |
+| 65   | 41   | 14       | 23   | 66   |
+
+| 技术 | 翻墙 | 加密技术 | 哲学 | 阅读 |
+| ---- | ---- | -------- | ---- | ---- |
+| 3    | 18   | 24       | 34   | 6    |
+
+| 音乐 | 影视 | 炉边诗社 | 博客 | 美食 |
+| ---- | ---- | -------- | ---- | ---- |
+| 7    | 11   | 46       | 8    | 43   |
+
+| 文学 | ACG | 欢乐 | 公告 | 分享发现 |
+| ---- | --- | ---- | ---- | -------- |
+| 84   | 30  | 17   | 67   | 5        |
+
+| 分享原创 | 2049 | 宗教 | 语言 | 人文 |
+| -------- | ---- | ---- | ---- | ---- |
+| 12       | 16   | 42   | 56   | 76   |
+
+| 站务 | 国防 | 工会 | 水 | 江湖 |
+| ---- | ---- | ---- | -- | ---- |
+| 13   | 15   | 29   | 4  | 21   |
+
+| 吐槽 | 树洞 | 标本 |
+| ---- | ---- | ---- |
+| 9    | 19   | 20   |
+
+排序
+
+| 即时 | 新帖 | 综合 | 精华  | 高赞 | 观看 |
+| ---- | ---- | ---- | ----- | ---- | ---- |
+| t_u  | t_c  | t_hn | t_hn2 | amv  | vc   |
+
+</Route>
+
 ## A 岛匿名版
 
 ### 串
@@ -174,9 +234,9 @@ pageClass: routes
 
 ### 帖子
 
-<Route author="zengxs" example="/saraba1st/thread/1789863" path="/saraba1st/thread/:tid" :paramsDesc="['帖子 id']" radar="1">
+<Route author="zengxs" example="/saraba1st/thread/1842868" path="/saraba1st/thread/:tid" :paramsDesc="['帖子 id']" radar="1">
 
-帖子网址如果为 <https://bbs.saraba1st.com/2b/thread-1789863-1-1.html> 那么帖子 id 就是 `1789863`。
+帖子网址如果为 <https://bbs.saraba1st.com/2b/thread-1842868-1-1.html> 那么帖子 id 就是 `1789863`。
 
 </Route>
 
@@ -189,6 +249,14 @@ pageClass: routes
 帖子网址如果为 <https://www.scboy.com/?thread-188673.htm> 那么帖子 tid 就是 `1789863`。
 
 访问水区需要添加环境变量 `SCBOY_BBS_TOKEN`, 详情见部署页面的配置模块。 `SCBOY_BBS_TOKEN`在 cookies 的`bbs_token`中。
+
+</Route>
+
+## The Ring of Wonder
+
+### 首页更新
+
+<Route author="shiningdracon" example="/trow/portal" path="/trow/portal" />
 
 </Route>
 
@@ -244,15 +312,21 @@ pageClass: routes
 
 <Route author="sfyumi" example="/eleduck/jobs" path="/eleduck/jobs"/>
 
+## 恩山无线论坛
+
+### 板块
+
+<Route author="nczitzk" example="/right/forum/31" path="/right/forum/:id?" :paramsDesc="['板块 id，可在板块页 URL 中找到']"/>
+
 ## 光谷社区
 
 ### 子论坛
 
-<Route author="nczitzk" example="/guanggoo/index" path="/guanggoo/:caty" :paramsDesc="['子论坛']">
+<Route author="nczitzk" example="/guanggoo/index" path="/guanggoo/:category?" :paramsDesc="['子论坛，默认为首页']">
 
-| 首页  | 你问我答 | 同城活动 | IT 技术 | 金融财经 | 创业创客 | 城市建设 |
-| ----- | -------- | -------- | ------- | -------- | -------- | -------- |
-| index | qna      | lowshine | it      | finance  | startup  | city     |
+| 首页 | 你问我答 | 同城活动 | IT 技术 | 金融财经 | 创业创客 | 城市建设 |
+| ---- | -------- | -------- | ------- | -------- | -------- | -------- |
+|      | qna      | lowshine | it      | finance  | startup  | city     |
 
 </Route>
 
@@ -322,6 +396,16 @@ pageClass: routes
 
 </Route>
 
+## 集思录
+
+### 用户回复
+
+<Route author="nczitzk" example="/jisilu/reply/BKL" path="/jisilu/reply/:user" :paramsDesc="['用户名，可在用户页 URL 中找到']"/>
+
+### 用户主题
+
+<Route author="nczitzk" example="/jisilu/topic/BKL" path="/jisilu/reply/:topic" :paramsDesc="['用户名，可在用户页 URL 中找到']"/>
+
 ## 看雪
 
 ### 论坛
@@ -350,6 +434,24 @@ pageClass: routes
 | 最新主题 | latest |
 | 精华主题 | digest |
 
+## 梨园
+
+### 主题帖（全站）
+
+<Route author="WooMai" example="/liyuan-forums/threads" path="/liyuan-forums/threads" />
+
+### 主题帖（板块）
+
+<Route author="WooMai" example="/liyuan-forums/threads/forum/1" path="/liyuan-forums/threads/forum/:forum_id" :paramsDesc="['板块 ID, 支持多个, 使用英文逗号分隔']" />
+
+### 主题帖（专题）
+
+<Route author="WooMai" example="/liyuan-forums/threads/topic/1" path="/liyuan-forums/threads/topic/:topic_id" :paramsDesc="['专题 ID, 支持多个, 使用英文逗号分隔']" />
+
+### 主题帖（用户）
+
+<Route author="WooMai" example="/liyuan-forums/threads/user/1" path="/liyuan-forums/threads/user/:user_id" :paramsDesc="['用户 ID (仅支持数字 ID), 支持多个, 使用英文逗号分隔']" />
+
 ## 龙空
 
 ### 分区
@@ -362,13 +464,13 @@ pageClass: routes
 
 ## 龙腾网
 
-### 转译网贴
+### 网帖翻译
 
-<Route author="sgqy" example="/ltaaa" path="/ltaaa/:type?" :paramsDesc="['热门类型.']">
+<Route author="sgqy nczitzk" example="/ltaaa" path="/ltaaa/:category?" :paramsDesc="['分类，见下表，默认为最新']">
 
-| 最新 | 每周 | 每月  | 全年 |
-| ---- | ---- | ----- | ---- |
-| (空) | week | month | year |
+| 最新   | 科技       | 娱乐  | 文化    | 社会      | 体育  | 历史    | 趣闻        | 图说世界 |
+| ------ | ---------- | ----- | ------- | --------- | ----- | ------- | ----------- | -------- |
+| latest | technology | funny | culture | community | sport | history | curiosities | picture  |
 
 </Route>
 
@@ -729,3 +831,17 @@ pageClass: routes
 ### 滚动新闻
 
 <Route author="nczitzk" example="/zhibo8/more/nba" path="/zhibo8/more/:caty" :paramsDesc="['分类，可选 `nba` 指 NBA，或 `zuqiu` 指 足球']"/>
+
+## 中国灵异网
+
+### 分类
+
+<Route author="sanmmm" example="/lingyi/qiwenyishi" path="/lingyi/:qiwenyishi" :paramsDesc="['分类']"> 
+
+| 编辑推荐 | 奇闻异事   | 鬼话连篇       |
+| -------- | ---------- | -------------- |
+| tuijian  | qiwenyishi | guihualianpian |
+
+| 灵异事件      | 灵异图片     | 民间奇谈     |
+| ------------- | ------------ | ------------ |
+| lingyishijain | lingyitupian | minjianqitan |
